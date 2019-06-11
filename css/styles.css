@@ -12,7 +12,11 @@ body {
     justify-content: center;
     text-align:center;
     height: 100vh;
-    color: black;
+    color: #1B1C1B;
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 }
 
 #time {
@@ -25,7 +29,7 @@ h1 {
 
 h2 {
     margin-bottom : 0.5rem;
-    opacity : 0.6;
+    opacity : 0.8;
 }
 
 @media(max-width: 700px) {
