@@ -27,8 +27,7 @@ function addZero(n) {
 //set background and greeting
 function setBg() {
     let today = new Date(),
-    hour = 16;
-    // hour = today.getHours();
+    hour = today.getHours();
 
     if(hour < 12) {
         document.body.style.backgroundImage = "url('../img/morning.jpg')";
