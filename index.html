@@ -1,28 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="description" content="Chrome új lap háttér névvel pontos idővel fókusszal és Kanye west idézetekkel">
+	<meta name="keywords" content="uj tab, pontos idő, fókusz, idézet, kanye west,">
+	<meta name="author" content="Stefánka Soma">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Üdvözlöm</title>
 </head>
 <body>
-	<time id="time"></time>
-	<div id="felso">
-		<H1>
+	<div class="alap">
+		<time id="time"></time>
+		<div id="felso">
+			<H1>
 			<span id="greeting"></span>
 			<span id="name" contenteditable="true"></span>
-		</H1>
+			</H1>
+		</div>
+		<div id="also">
+			<h2>Mire Fókuszálsz ma?</h2>
+			<h2 id="focus" contenteditable="true"></h2>
+		</div>
+	</div>
+	<div class="idezet">
+		<blockquote id="kanye"></blockquote>
+		<footer>- Kanye West</footer>
 	</div>
 	
-	<div id="also">
-		<h2>Mire Fókuszálsz ma?</h2>
-		<h2 id="focus" contenteditable="true"></h2>
-	</div>
 	
 
 </body>
-<script src="js/main.js"></script>
+<script src="js/main.js" async></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script> -->
 </html>

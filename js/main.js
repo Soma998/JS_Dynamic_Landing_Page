@@ -2,6 +2,7 @@ const time = document.querySelector('#time');
 const greeting = document.querySelector('#greeting');
 const name = document.querySelector('#name');
 const focus = document.querySelector('#focus');
+const kanye = document.querySelector('#kanye');
 const felsoDiv = document.querySelector('#felso');
 const alsoDiv = document.querySelector('#also');
 
@@ -31,9 +32,10 @@ function setBg() {
 
     if(hour < 12) {
         document.body.style.backgroundImage = "url('../img/morning.jpg')";
+        document.body.style.textShadow = "0px 0px 0px";
         greeting.textContent = 'Jó Reggelt';
 
-    } else if(hour < 18) {
+    } else if (hour < 18) {
         document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
         greeting.textContent = "Jó Napot";
         document.body.style.color = "white";
@@ -93,13 +95,23 @@ function setFocus(e) {
     }
 }
 
-
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
 
-
+//Kanye west idezetek az API-ból
+fetch('https://api.kanye.rest')
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        kanye.innerHTML = `"${data.quote}"`
+    })
+    .catch((error) => {
+        // handle error
+        console.log(error);
+      })
 
 //Run functions
 showTime();
