@@ -84,7 +84,7 @@ function getFocus() {
 function setFocus(e) {
     if (e.type === 'keypress') {
         // keypress === enter
-        if (e.wich == 13 ||e.keyCode == 13) {
+        if (e.wich == 13 || e.keyCode == 13) {
             localStorage.setItem('focus', e.target.innerText);
             focus.blur();
         }
